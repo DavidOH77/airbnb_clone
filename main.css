@@ -39,13 +39,20 @@ header .main-box {
   justify-content: space-between;
 }
 
+header .main-box .icon-wrapper {
+  text-align: center;
+  margin: auto 0;
+}
+
 header .main-box .icon {
+  color: #ff385c;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+header .main-box .icon .svg-icon {
   width: 102px;
   height: 32px;
-  color: #ff385c;
-  justify-content: center;
-  align-items: center;
-  margin-right: 100px;
 }
 
 /* SEARCH BAR */
@@ -56,7 +63,14 @@ header .main-box .search-bar {
   border-radius: 40px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  margin-left: 130px;
+  transition: 0.5s;
+}
+
+header .main-box .search-bar:hover {
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
 }
 
 header .main-box .search-bar .items {
@@ -126,14 +140,42 @@ header .main-box .search-bar .icon-glass svg {
 }
 
 header .main-box .nav {
-  width: 220px;
+  width: 250px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   font-weight: 1000;
 }
 
+header .main-box .nav .beHost {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-right: -7px;
+  transition: 0.3s;
+}
+
+header .main-box .nav .beHost:hover {
+  background-color: #f3f1f1;
+}
+
 header .main-box .nav .langAndLoc {
+  cursor: pointer;
+  display: flex;
+  border-radius: 20px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+header .main-box .nav .langAndLoc:hover {
+  background-color: #f3f1f1;
+}
+
+header .main-box .nav .langAndLoc .material-icons {
   width: 16px;
   height: 16px;
 }
@@ -148,6 +190,11 @@ header .main-box .nav .sub-nav {
   color: #838383;
   border: 2px solid #ededed;
   border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+header .main-box .nav .sub-nav:hover {
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
 }
 
 header .main-box .nav .sub-nav .list-up {
@@ -172,12 +219,20 @@ header .catogory-contianer {
 header .catogory-contianer .category-item-btn {
   height: 78px;
   cursor: pointer;
+  border: none;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+header .catogory-contianer .category-item-btn:hover {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 2px solid #838383;
-  background-color: #fff;
+  border-bottom: 2px solid #dbd9d9;
+  opacity: 1;
 }
+
+/* #838383; */
 
 header .catogory-contianer .category-item {
   display: flex;
@@ -189,7 +244,6 @@ header .catogory-contianer .category-item {
 header .catogory-contianer .category-image {
   width: 24px;
   height: 24px;
-  color: red;
 }
 
 header .catogory-contianer .category-text {
@@ -208,6 +262,7 @@ header .catogory-contianer .category-filter {
   border: 1px solid #ededed;
   width: 85px;
   height: 50px;
+  cursor: pointer;
 }
 
 header .catogory-contianer .category-filter .filter-image {
@@ -249,6 +304,11 @@ header .catogory-contianer .category-filter .filter-text {
   position: absolute;
   top: 13px;
   right: 13px;
+  transition: 0.3s;
+}
+
+.grid-container .accommo .like:active {
+  transform: scale(0.9);
 }
 
 .grid-container .accommo .info {
@@ -307,6 +367,11 @@ header .catogory-contianer .category-filter .filter-text {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.floating-btn .floating-box:hover {
+  transform: scale(1.05);
 }
 
 .floating-btn .floating-box .map-text {
@@ -353,6 +418,7 @@ footer
   .policy-btn
   .policy-item:last-child {
   margin-right: 0;
+  position: relative;
 }
 
 footer .footer-container .detail-infomation .policy-btn .policy-item::after {
@@ -420,21 +486,12 @@ footer
   margin-right: 0;
 }
 
-footer .footer-container .detail-infomation .localInfo-btn .policy-item::after {
-  content: "·";
-  width: 2px;
-  height: 2px;
-  position: absolute;
-  color: #838383;
-  padding-left: 10px;
-}
-
 footer
   .footer-container
   .detail-infomation
-  .policy-btn
-  .policy-item:last-child::after {
-  display: none;
+  .localInfo-btn
+  .localInfo-item:last-child:hover {
+  text-decoration: underline;
 }
 
 footer .footer-container .web-policy-info {
@@ -442,4 +499,13 @@ footer .footer-container .web-policy-info {
   font-size: 10px;
   color: #717171;
   line-height: 13px;
+}
+
+footer .item-url {
+  color: #222222;
+  text-decoration: none;
+}
+
+footer .item-url:hover {
+  text-decoration: underline;
 }
